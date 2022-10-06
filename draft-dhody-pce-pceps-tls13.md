@@ -131,8 +131,7 @@ for a dynamic network that is centrally controlled.  {{RFC8283}}
 introduces the architecture for PCE as a central controller
 
 TLS 1.3 mutual authentication is used
-to ensure that only authorized users and systems are able to send and receive PCEP 
-messages. To this end, neither the PCC nor the PCE
+to ensure that only authorized users and systems are able to send and receive PCEP messages. To this end, neither the PCC nor the PCE
 should establish a PCEPS with TLS 1.3 connection with an unknown,
 unexpected, or incorrect peer identity; see {{Section 3.5 of RFC5440}}. If
 deployments make use of this list of Certification Authority (CA)
