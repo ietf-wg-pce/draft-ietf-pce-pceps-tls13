@@ -8,7 +8,7 @@ submissiontype: IETF
 consensus: true
 v: 3
 area: "Routing"
-workgroup: "PCE"
+workgroup: "Path Computation Element"
 keyword:
  - PCEP
  - PCEPS
