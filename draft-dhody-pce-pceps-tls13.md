@@ -114,8 +114,7 @@ The Security Considerations in TLS 1.3 are specified in {{I-D.ietf-tls-rfc8446bi
 The recommendations regarding Diffie-Hellman exponent reuse
 are specified in {{Section 7.4 of I-D.ietf-uta-rfc7525bis}}.
 
-The key Security Considerations for PCEP are described in {{RFC5440}}, {{?RFC8231}}, 
-{{?RFC8281}}, and {{?RFC8283}}.
+The key Security Considerations for PCEP are described in {{RFC5440}}, {{?RFC8231}}, {{?RFC8281}}, and {{?RFC8283}}.
 
 
 The Path Computation Element (PCE) defined in {{?RFC4655}} is an entity
@@ -133,8 +132,7 @@ introduces the architecture for PCE as a central controller
 
 TLS 1.3 mutual authentication is used
 to ensure that only authorized users and systems are able to send and receive PCEP 
-messages. 
-To this end, neither the PCC nor the PCE
+messages. To this end, neither the PCC nor the PCE
 should establish a PCEPS with TLS 1.3 connection with an unknown,
 unexpected, or incorrect peer identity; see {{Section 3.5 of RFC5440}}. If
 deployments make use of this list of Certification Authority (CA)
@@ -149,7 +147,7 @@ are specified in {{Section 7.5 of I-D.ietf-uta-rfc7525bis}}.
 
 # IANA Considerations
 
-There are no IANA considerations. 
+There are no IANA considerations.
 
 --- back
 
