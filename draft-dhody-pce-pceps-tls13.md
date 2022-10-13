@@ -70,7 +70,7 @@ authenticate the server and to encrypt the early data.
 
 As noted in {{Section 2.3 of I-D.ietf-tls-rfc8446bis}}, the security
 properties for early data are weaker than those for subsequent TLS-protected
-data. In particular, early data is not forward secret, and there are no
+data. In particular, early data is not forward secret, and there is no
 protection against the replay of early data between connections.
 {{Appendix E.5 of I-D.ietf-tls-rfc8446bis}} requires applicaitons not
 use early data without a profile that defines its use. This document
@@ -133,8 +133,8 @@ introduces the architecture for PCE as a central controller
 TLS 1.3 mutual authentication is used
 to ensure that only authorized users and systems are able to send and receive PCEP messages. To this end, neither the PCC nor the PCE
 should establish a PCEPS with TLS 1.3 connection with an unknown,
-unexpected, or incorrect peer identity; see {{Section 3.5 of RFC5440}}. If
-deployments make use of this list of Certification Authority (CA)
+unexpected, or incorrectly identified peer; see {{Section 3.5 of RFC5440}}. If
+deployments make use of a trusted list of Certification Authority (CA)
 certificates {{!RFC5280}}, then the listed CAs should only issue certificates
 to parties that are authorized to access the PCE. Doing otherwise
 will allow certificates that were issued for other purposes to be
