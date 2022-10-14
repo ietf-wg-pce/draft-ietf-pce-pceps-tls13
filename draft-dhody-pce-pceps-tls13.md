@@ -49,8 +49,8 @@ This document describes how to protect PCEP messages with TLS 1.3.
 TLS 1.2 {{?RFC5246}}. This document describes defines how to protect
 PCEP messages with TLS 1.3 {{!I-D.ietf-tls-rfc8446bis}}.
 
-\[Editor's Note: The reference to {{I-D.ietf-tls-rfc8446bis}} could be 
-changed to RFC 8446 incase the progress of the bis draft is slower than the 
+\[Editor's Note: The reference to {{I-D.ietf-tls-rfc8446bis}} could be
+changed to RFC 8446 incase the progress of the bis draft is slower than the
 progression of this document.\]
 
 This document addresses cipher suites and the use of early data, which is also
@@ -67,13 +67,13 @@ connection closure, certificate validation, peer identity, and failure handling.
 
 Early data (aka 0-RTT data) is a mechanism defined in TLS 1.3
 {{I-D.ietf-tls-rfc8446bis}} that allows a client to send data ("early data")
-as part of the first flight of messages to a server. Note that 
-TLS 1.3 can be used without early data as per 
-{{Section F.5 of I-D.ietf-tls-rfc8446bis}}. 
-Infact, early data is permitted by TLS 1.3 only when the client and server 
+as part of the first flight of messages to a server. Note that
+TLS 1.3 can be used without early data as per
+{{Section F.5 of I-D.ietf-tls-rfc8446bis}}.
+Infact, early data is permitted by TLS 1.3 only when the client and server
 share a Pre-Shared Key (PSK), either obtained
 externally or via a previous handshake. The client uses the PSK to
-authenticate the server and to encrypt the early data. 
+authenticate the server and to encrypt the early data.
 
 As noted in {{Section 2.3 of I-D.ietf-tls-rfc8446bis}}, the security
 properties for early data are weaker than those for subsequent TLS-protected
@@ -85,11 +85,11 @@ specifies that PCEPS implementations that support TLS 1.3 MUST NOT use early dat
 
 # Cipher Suites
 
-Implementations that support TLS 1.3 {{I-D.ietf-tls-rfc8446bis}} 
+Implementations that support TLS 1.3 {{I-D.ietf-tls-rfc8446bis}}
 are REQUIRED to support the mandatory-to-implement cipher
 suites listed in {{Section 9.1 of I-D.ietf-tls-rfc8446bis}}.
 
-Implementations that support TLS 1.3 MAY implement additional TLS 
+Implementations that support TLS 1.3 MAY implement additional TLS
 cipher suites that provide mutual authentication and confidentiality,
 which are required for PCEP.
 
@@ -122,7 +122,7 @@ The Security Considerations in TLS 1.3 are specified in {{I-D.ietf-tls-rfc8446bi
 The recommendations regarding Diffie-Hellman exponent reuse
 are specified in {{Section 7.4 of I-D.ietf-uta-rfc7525bis}}.
 
-The key Security Considerations for PCEP are described in {{RFC5440}}, 
+The key Security Considerations for PCEP are described in {{RFC5440}},
 {{?RFC8231}}, {{?RFC8281}}, and {{?RFC8283}}.
 
 The Path Computation Element (PCE) defined in {{?RFC4655}} is an entity
@@ -139,7 +139,7 @@ for a dynamic network that is centrally controlled.  {{RFC8283}}
 introduces the architecture for PCE as a central controller
 
 TLS 1.3 mutual authentication is used
-to ensure that only authorized users and systems are able to send and receive 
+to ensure that only authorized users and systems are able to send and receive
 PCEP messages. To this end, neither the PCC nor the PCE
 should establish a PCEPS with TLS 1.3 connection with an unknown,
 unexpected, or incorrectly identified peer; see {{Section 3.5 of RFC5440}}. If
