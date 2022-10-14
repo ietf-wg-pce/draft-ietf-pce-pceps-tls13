@@ -49,6 +49,10 @@ This document describes how to protect PCEP messages with TLS 1.3.
 TLS 1.2 {{?RFC5246}}. This document describes defines how to protect
 PCEP messages with TLS 1.3 {{!I-D.ietf-tls-rfc8446bis}}.
 
+[Editor's Note: The reference to {{I-D.ietf-tls-rfc8446bis}} could be 
+changed to RFC 8446 incase the progress of the bis draft is slower than the 
+progression of this document.]
+
 This document addresses cipher suites and the use of early data, which is also
 known as 0-RTT data. All other provisions set forth
 in {{!RFC8253}} are unchanged, including connection initiation, message framing,
@@ -76,18 +80,19 @@ data. In particular, early data is not forward secret, and there is no
 protection against the replay of early data between connections.
 {{Appendix E.5 of I-D.ietf-tls-rfc8446bis}} requires applicaitons not
 use early data without a profile that defines its use. This document
-specifies that PCEPS implementations MUST NOT use early data.
+specifies that PCEPS implementations that support TLS 1.3 MUST NOT use early data.
 
 # Cipher Suites
 
-Implementations MUST support TLS 1.3 {{I-D.ietf-tls-rfc8446bis}}, and
-implementation are REQUIRED to support the mandatory-to-implement cipher
+Implementations that support TLS 1.3 {{I-D.ietf-tls-rfc8446bis}} 
+are REQUIRED to support the mandatory-to-implement cipher
 suites listed in {{Section 9.1 of I-D.ietf-tls-rfc8446bis}}.
 
-Implementations MAY implement additional TLS cipher suites that provide
-mutual authentication and confidentiality, which are required for PCEP.
+Implementations that support TLS 1.3 MAY implement additional TLS 
+cipher suites that provide mutual authentication and confidentiality,
+which are required for PCEP.
 
-Implementations SHOULD follow the recommendations given in
+PCEPS Implementations SHOULD follow the recommendations given in
 {{!I-D.ietf-uta-rfc7525bis}}.
 
 ~~~
@@ -117,7 +122,6 @@ The recommendations regarding Diffie-Hellman exponent reuse
 are specified in {{Section 7.4 of I-D.ietf-uta-rfc7525bis}}.
 
 The key Security Considerations for PCEP are described in {{RFC5440}}, {{?RFC8231}}, {{?RFC8281}}, and {{?RFC8283}}.
-
 
 The Path Computation Element (PCE) defined in {{?RFC4655}} is an entity
 that is capable of computing a network path or route based on a
@@ -155,4 +159,4 @@ There are no IANA considerations.
 # Acknowledgments
 {:numbered="false"}
 
-We would like to thank the following people TBD.
+We would like to thank Adrian Farrel for their review.
