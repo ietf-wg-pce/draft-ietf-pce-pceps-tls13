@@ -1,6 +1,6 @@
 ---
-title: PCEPS with TLS 1.2 & TLS 1.3
-abbrev: PCEPS with TLS 1.2 & 1.3
+title: Updates for PCEPS
+abbrev: Updates for PCEPS
 category: std
 updates: 8253
 
