@@ -16,6 +16,7 @@ keyword:
  - TLS 1.3
  - TLS 1.2
  - Early Data
+ - 0-RTT
 
 author:
  -
