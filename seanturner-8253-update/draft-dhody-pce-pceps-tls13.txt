@@ -6,9 +6,9 @@ PCE                                                             D. Dhody
 Internet-Draft                                       Huawei Technologies
 Updates: 8253 (if approved)                                    S. Turner
 Intended status: Standards Track                                   sn3rd
-Expires: 11 September 2023                                    R. Housley
+Expires: 13 September 2023                                    R. Housley
                                                           Vigil Security
-                                                           10 March 2023
+                                                           12 March 2023
 
 
                            Updates for PCEPS
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 September 2023.
+   This Internet-Draft will expire on 13 September 2023.
 
 Copyright Notice
 
