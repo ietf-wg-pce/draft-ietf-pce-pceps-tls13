@@ -1,7 +1,8 @@
 ---
-title: PCEPS with TLS 1.3
-abbrev: PCEPS-with-TLS1.3
+title: Updates for PCEPS
+abbrev: Updates for PCEPS
 category: std
+updates: 8253
 
 docname: draft-dhody-pce-pceps-tls13-latest
 submissiontype: IETF
@@ -13,6 +14,9 @@ keyword:
  - PCEP
  - PCEPS
  - TLS 1.3
+ - TLS 1.2
+ - Early Data
+ - 0-RTT
 
 author:
  -
@@ -37,8 +41,9 @@ author:
 
 --- abstract
 
-RFC 8253 defines how to protect PCEP messages with TLS 1.2.
-This document describes how to protect PCEP messages with TLS 1.3.
+RFC 8253 defines how to protect PCEP messages with TLS 1.2. This
+document updates RFC 8253 to address support requirements for TLS 1.2
+and TLS 1.3 and the use of TLS 1.3's early data.
 
 
 --- middle
@@ -46,17 +51,19 @@ This document describes how to protect PCEP messages with TLS 1.3.
 # Introduction
 
 {{!RFC8253}} defines how to protect PCEP messages {{!RFC5440}} with
-TLS 1.2 {{?RFC5246}}. This document describes defines how to protect
-PCEP messages with TLS 1.3 {{!I-D.ietf-tls-rfc8446bis}}.
+TLS 1.2 {{!RFC5246}}. This document updates {{RFC8253}} to address
+support requirements for TLS 1.2 {{RFC5246}} and TLS 1.3 {{!I-D.ietf-tls-rfc8446bis}}
+and the use of TLS 1.3's early data, which is also known as 0-RTT data.
+All other provisions set forth in {{RFC8253}} are unchanged, including
+connection initiation, message framing, connection closure, certificate
+validation, peer identity, and failure handling.
 
-\[Editor's Note: The reference to {{I-D.ietf-tls-rfc8446bis}} could be
-changed to RFC 8446 incase the progress of the bis draft is slower than the
-progression of this document.\]
+<aside markdown="block">
+  Editor's Note: The reference to {{I-D.ietf-tls-rfc8446bis}} could
+  be changed to RFC 8446 incase the progress of the bis draft is
+  slower than the progression of this document.
+</aside>
 
-This document addresses cipher suites and the use of early data, which is also
-known as 0-RTT data. All other provisions set forth
-in {{!RFC8253}} are unchanged, including connection initiation, message framing,
-connection closure, certificate validation, peer identity, and failure handling.
 
 # Conventions and Definitions
 
@@ -83,28 +90,36 @@ protection against the replay of early data between connections.
 use early data without a profile that defines its use. This document
 specifies that PCEPS implementations that support TLS 1.3 MUST NOT use early data.
 
+
 # Cipher Suites
+
+Implementations MUST support TLS 1.2 {{RFC5246}} and are REQUIRED to
+support the TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 cipher suite {{!RFC9325}}.
+
+Implementations MAY implement additional TLS 1.2 cipher suites that provide
+mutual authentication and confidentiality as required by PCEP.
+
+Implementations SHOULD support TLS 1.3 {{I-D.ietf-tls-rfc8446bis}} and,
+if implemented, MUST prefer to negotiate TLS 1.3 over earlier versions
+of TLS.
 
 Implementations that support TLS 1.3 {{I-D.ietf-tls-rfc8446bis}}
 are REQUIRED to support the mandatory-to-implement cipher
 suites listed in {{Section 9.1 of I-D.ietf-tls-rfc8446bis}}.
 
-Implementations that support TLS 1.3 MAY implement additional TLS
-cipher suites that provide mutual authentication and confidentiality,
-which are required for PCEP.
+Implementations that support TLS 1.3 MAY implement additional TLS 1.3
+cipher suites that provide mutual authentication and confidentiality
+as required by PCEP.
 
 PCEPS Implementations SHOULD follow the recommendations given in
-{{!I-D.ietf-uta-rfc7525bis}}.
+{{RFC9325}}.
+
 
 # Security Considerations
 
-The Security Considerations in TLS 1.3 are specified in {{I-D.ietf-tls-rfc8446bis}}.
-
-The recommendations regarding Diffie-Hellman exponent reuse
-are specified in {{Section 7.4 of I-D.ietf-uta-rfc7525bis}}.
-
-The key Security Considerations for PCEP are described in {{RFC5440}},
-{{?RFC8231}}, {{?RFC8281}}, and {{?RFC8283}}.
+The Security Considerations of PCEP {{RFC5440}}, {{?RFC8231}},
+{{?RFC8281}}, and {{?RFC8283}}; TLS 1.2 {{RFC5246}}; TLS 1.3 {{I-D.ietf-tls-rfc8446bis}},
+and; {{RFC9325}} apply here as well.
 
 The Path Computation Element (PCE) defined in {{?RFC4655}} is an entity
 that is capable of computing a network path or route based on a
@@ -119,19 +134,15 @@ without the need for local configuration on the PCC, thus allowing
 for a dynamic network that is centrally controlled.  {{RFC8283}}
 introduces the architecture for PCE as a central controller
 
-TLS 1.3 mutual authentication is used
-to ensure that only authorized users and systems are able to send and receive
-PCEP messages. To this end, neither the PCC nor the PCE
-should establish a PCEPS with TLS 1.3 connection with an unknown,
-unexpected, or incorrectly identified peer; see {{Section 3.5 of RFC5440}}. If
-deployments make use of a trusted list of Certification Authority (CA)
-certificates {{!RFC5280}}, then the listed CAs should only issue certificates
-to parties that are authorized to access the PCE. Doing otherwise
-will allow certificates that were issued for other purposes to be
-inappropriately accepted by a PCE.
-
-The recommendations regarding certificate revocation checking
-are specified in {{Section 7.5 of I-D.ietf-uta-rfc7525bis}}.
+TLS mutual authentication is used to ensure that only authorized users
+and systems are able to send and receive PCEP messages. To this end,
+neither the PCC nor the PCE should establish a PCEPS with TLS connection
+with an unknown, unexpected, or incorrectly identified peer; see
+{{Section 3.5 of RFC5440}}. If deployments make use of a trusted list of
+Certification Authority (CA) certificates {{!RFC5280}}, then the listed
+CAs should only issue certificates to parties that are authorized to
+access the PCE. Doing otherwise will allow certificates that were issued
+for other purposes to be inappropriately accepted by a PCE.
 
 
 # IANA Considerations
