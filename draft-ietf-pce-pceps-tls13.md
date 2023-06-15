@@ -4,7 +4,7 @@ abbrev: Updates for PCEPS
 category: std
 updates: 8253
 
-docname: draft-dhody-pce-pceps-tls13-latest
+docname: draft-ietf-pce-pceps-tls13-latest
 submissiontype: IETF
 consensus: true
 v: 3
