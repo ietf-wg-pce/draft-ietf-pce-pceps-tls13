@@ -22,7 +22,7 @@ author:
  -
     ins: D. Dhody
     name: Dhruv Dhody
-    organization: Huawei Technologies
+    organization: Huawei
     email: dhruv.ietf@gmail.com
  -
     ins: S. Turner
@@ -151,11 +151,12 @@ There are no IANA considerations.
 
 # Implementation Status
 
-[Note to the RFC Editor - remove this section before publication, as well as remove the reference to RFC 7942.]
+[Note to the RFC Editor - remove this section before publication, as
+well as remove the reference to RFC 7942.]
 
 This section records the status of known implementations of the
 protocol defined by this specification at the time of posting of this
-Internet-Draft, and is based on a proposal described in {{RFC7942}}.
+Internet-Draft, and is based on a proposal described in {{?RFC7942}}.
 The description of implementations in this section is intended to
 assist the IETF in its decision processes in progressing drafts to
 RFCs.  Please note that the listing of any individual implementation
@@ -166,7 +167,7 @@ be construed to be, a catalogue of available implementations or their
 features.  Readers are advised to note that other implementations may
 exist.
 
-According to {{RFC7942}}, "this will allow reviewers and working groups
+According to {{?RFC7942}}, "this will allow reviewers and working groups
 to assign due consideration to documents that have the benefit of
 running code, which may serve as evidence of valuable experimentation
 and feedback that have made the implemented protocols more mature.
