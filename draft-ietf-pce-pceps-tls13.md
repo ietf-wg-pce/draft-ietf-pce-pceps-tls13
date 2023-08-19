@@ -171,7 +171,7 @@ to assign due consideration to documents that have the benefit of
 running code, which may serve as evidence of valuable experimentation
 and feedback that have made the implemented protocols more mature.
 It is up to the individual working groups to use this information as
-they see fit". 
+they see fit".
 
 At the time of posting the -01 version of this document, there are no
 known implementations of this mechanism.  
