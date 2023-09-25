@@ -1,17 +1,17 @@
 # PCEPS with TLS 1.3
 
-This is the working area for the individual Internet-Draft, "PCEPS with TLS 1.3".
+This is the working area for the WG Internet-Draft, "PCEPS with TLS 1.3".
 
-* [Editor's Copy](https://dhruvdhody.github.io/draft-dhody-pce-pceps-tls13/#go.draft-dhody-pce-pceps-tls13.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-dhody-pce-pceps-tls13)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-dhody-pce-pceps-tls13)
-* [Compare Editor's Copy to Individual Draft](https://dhruvdhody.github.io/draft-dhody-pce-pceps-tls13/#go.draft-dhody-pce-pceps-tls13.diff)
+* [Editor's Copy](https://ietf-wg-pce.github.io/draft-ietf-pce-pceps-tls13/#go.draft-ietf-pce-pceps-tls13.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-pce-pceps-tls13)
+* [WG Draft](https://datatracker.ietf.org/doc/html/draft-ietf-pce-pceps-tls13)
+* [Compare Editor's Copy to WG Draft](https://ietf-wg-pce.github.io/draft-ietf-pce-pceps-tls13/#go.draft-ietf-pce-pceps-tls13.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/dhruvdhody/draft-dhody-pce-pceps-tls13/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/ietf-wg-pce/draft-ietf-pce-pceps-tls13/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
