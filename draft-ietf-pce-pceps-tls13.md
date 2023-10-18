@@ -88,7 +88,7 @@ prefer to negotiate the latest version of the TLS protocol.
 * PCEPS implementations that support TLS 1.3 or later MUST NOT use early data.
 
 NOTE:
-:  Early data (aka 0-RTT data) is a mechanism defined in TLS 1.3
+: Early data (aka 0-RTT data) is a mechanism defined in TLS 1.3
   {{I-D.ietf-tls-rfc8446bis}} that allows a client to send data ("early
   data") as part of the first flight of messages to a server.  Note
   that TLS 1.3 can be used without early data as per Appendix F.5 of
