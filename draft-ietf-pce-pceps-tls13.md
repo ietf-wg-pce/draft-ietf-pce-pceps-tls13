@@ -59,7 +59,7 @@ provide a secure transport for PCEP (Path Computation Element
 Communication Protocol) {{!RFC5440}}.  This document adds restrictions to specify
 what PCEPS implementations do if they support more than one version of
 the TLS protocol, e.g., TLS 1.2 {{!RFC5246}} and
-TLS 1.3 {{!I-D.ietf-tls-rfc8446bis], and to restrict the use of
+TLS 1.3 {{!I-D.ietf-tls-rfc8446bis}}, and to restrict the use of
 TLS 1.3’s early data, which is also known as 0-RTT data. All other
 provisions set forth in {{RFC8253}} are unchanged, including connection
 initiation, message framing, connection closure, certificate validation,
