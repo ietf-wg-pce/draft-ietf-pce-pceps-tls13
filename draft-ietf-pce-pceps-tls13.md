@@ -54,9 +54,9 @@ TLS 1.3’s early data.
 # Introduction
 
 {{Section 3.4 of !RFC8253}} specifies TLS connection establishment
-restrictions for PCEPS {{!RFC5440}}; PCEPS refers to usage of TLS to
+restrictions for PCEPS; PCEPS refers to usage of TLS to
 provide a secure transport for PCEP (Path Computation Element
-Communication Protocol).  This document adds restrictions to specify
+Communication Protocol) {{!RFC5440}}.  This document adds restrictions to specify
 what PCEPS implementations do if they support more than one version of
 the TLS protocol, e.g., TLS 1.2 {{!RFC5246}} and
 TLS 1.3 {{!I-D.ietf-tls-rfc8446bis], and to restrict the use of
