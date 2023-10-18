@@ -99,7 +99,7 @@ NOTE:
   data.
 
 NOTE:
-:  As noted in {{Section 2.3 of I-D.ietf-tls-rfc8446bis}}, the security
+: As noted in {{Section 2.3 of I-D.ietf-tls-rfc8446bis}}, the security
   properties for early data are weaker than those for subsequent TLS-
   protected data.  In particular, early data is not forward secret, and
   there is no protection against the replay of early data between
