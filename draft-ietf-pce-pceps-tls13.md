@@ -157,8 +157,10 @@ There are no IANA considerations.
 
 # Implementation Status
 
-[Note to the RFC Editor - remove this section before publication, as
-well as remove the reference to RFC 7942.]
+<aside markdown="block">
+  Note to the RFC Editor - remove this section before publication, as
+  well as remove the reference to RFC 7942.
+</aside>
 
 This section records the status of known implementations of the
 protocol defined by this specification at the time of posting of this
