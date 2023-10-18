@@ -111,7 +111,7 @@ NOTE:
 
 The Security Considerations of PCEP {{RFC5440}}, {{?RFC8231}},
 {{?RFC8281}}, and {{?RFC8283}}; TLS 1.2 {{RFC5246}}; TLS 1.3 {{I-D.ietf-tls-rfc8446bis}},
-and; {{RFC9325}} apply here as well.
+and; {{!RFC9325}} apply here as well.
 
 The Path Computation Element (PCE) defined in {{?RFC4655}} is an entity
 that is capable of computing a network path or route based on a
