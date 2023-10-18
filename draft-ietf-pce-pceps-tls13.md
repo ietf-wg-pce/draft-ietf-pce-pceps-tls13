@@ -9,7 +9,7 @@ submissiontype: IETF
 consensus: true
 v: 3
 area: "Routing"
-workgroup: "PCE"
+workgroup: "Path Computation Element"
 keyword:
  - PCEP
  - PCEPS
@@ -17,6 +17,12 @@ keyword:
  - TLS 1.2
  - Early Data
  - 0-RTT
+venue:
+  group: "Path Computation Element"
+  type: "Working Group"
+  mail: "pce@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/pce/"
+  github: "ietf-wg-pce/draft-ietf-pce-pceps-tls13"
 
 author:
  -
