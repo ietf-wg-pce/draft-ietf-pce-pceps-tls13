@@ -1,5 +1,5 @@
 ---
-title: Updates for PCEPS
+title: "Updates for PCEPS: TLS Connection Establishment Restrictions"
 abbrev: Updates for PCEPS
 category: std
 updates: 8253
@@ -47,22 +47,29 @@ author:
 
 --- abstract
 
-RFC 8253 defines how to protect PCEP messages with TLS 1.2. This
-document updates RFC 8253 to address support requirements for TLS 1.2
-and TLS 1.3 and the use of TLS 1.3's early data.
+Section 3.4 of RFC 8253 specifies TLS connection establishment restrictions
+for PCEPS; PCEPS refers to usage of TLS to provide a secure transport for
+PCEP (Path Computation Element Communication Protocol).  This document adds
+restrictions to specify what PCEPS implementations do if a PCEPS supports
+more than one version of the TLS protocol and to restrict the use of
+TLS 1.3’s early data.
 
 
 --- middle
 
 # Introduction
 
-{{!RFC8253}} defines how to protect PCEP messages {{!RFC5440}} with
-TLS 1.2 {{!RFC5246}}. This document updates {{RFC8253}} to address
-support requirements for TLS 1.2 {{RFC5246}} and TLS 1.3 {{!I-D.ietf-tls-rfc8446bis}}
-and the use of TLS 1.3's early data, which is also known as 0-RTT data.
-All other provisions set forth in {{RFC8253}} are unchanged, including
-connection initiation, message framing, connection closure, certificate
-validation, peer identity, and failure handling.
+{{Section 3.4 of !RFC8253}} specifies TLS connection establishment
+restrictions for PCEPS; PCEPS refers to usage of TLS to
+provide a secure transport for PCEP (Path Computation Element
+Communication Protocol) {{!RFC5440}}.  This document adds restrictions to specify
+what PCEPS implementations do if they support more than one version of
+the TLS protocol, e.g., TLS 1.2 {{!RFC5246}} and
+TLS 1.3 {{!I-D.ietf-tls-rfc8446bis}}, and to restrict the use of
+TLS 1.3’s early data, which is also known as 0-RTT data. All other
+provisions set forth in {{RFC8253}} are unchanged, including connection
+initiation, message framing, connection closure, certificate validation,
+peer identity, and failure handling.
 
 <aside markdown="block">
   Editor's Note: The reference to {{I-D.ietf-tls-rfc8446bis}} could
@@ -76,56 +83,41 @@ validation, peer identity, and failure handling.
 {::boilerplate bcp14-tagged}
 
 
-# Early Data
+# TLS Connection Establishment Restrictions
 
-Early data (aka 0-RTT data) is a mechanism defined in TLS 1.3
-{{I-D.ietf-tls-rfc8446bis}} that allows a client to send data ("early data")
-as part of the first flight of messages to a server. Note that
-TLS 1.3 can be used without early data as per
-{{Section F.5 of I-D.ietf-tls-rfc8446bis}}.
-In fact, early data is permitted by TLS 1.3 only when the client and server
-share a Pre-Shared Key (PSK), either obtained
-externally or via a previous handshake. The client uses the PSK to
-authenticate the server and to encrypt the early data.
+{{Section 3.4 of RFC8253}} Step 1 includes restrictions on PCEPS TLS connection
+establishment. This document adds the following restrictions:
 
-As noted in {{Section 2.3 of I-D.ietf-tls-rfc8446bis}}, the security
-properties for early data are weaker than those for subsequent TLS-protected
-data. In particular, early data is not forward secret, and there is no
-protection against the replay of early data between connections.
-{{Appendix E.5 of I-D.ietf-tls-rfc8446bis}} requires applications not
-use early data without a profile that defines its use. This document
-specifies that PCEPS implementations that support TLS 1.3 MUST NOT use early data.
+* Implementations that support multiple versions of the TLS protocol MUST
+prefer to negotiate the latest version of the TLS protocol.
 
+* PCEPS implementations that support TLS 1.3 or later MUST NOT use early data.
 
-# Cipher Suites
+NOTE:
+: Early data (aka 0-RTT data) is a mechanism defined in TLS 1.3
+  {{I-D.ietf-tls-rfc8446bis}} that allows a client to send data ("early
+  data") as part of the first flight of messages to a server.  Note
+  that TLS 1.3 can be used without early data as per Appendix F.5 of
+  {{I-D.ietf-tls-rfc8446bis}}.  In fact, early data is permitted by TLS
+  1.3 only when the client and server share a Pre-Shared Key (PSK),
+  either obtained externally or via a previous handshake.  The client
+  uses the PSK to authenticate the server and to encrypt the early
+  data.
 
-Implementations MUST support TLS 1.2 {{RFC5246}} and are REQUIRED to
-support the TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 cipher suite {{!RFC9325}}.
-
-Implementations MAY implement additional TLS 1.2 cipher suites that provide
-mutual authentication and confidentiality as required by PCEP.
-
-Implementations SHOULD support TLS 1.3 {{I-D.ietf-tls-rfc8446bis}} and,
-if implemented, MUST prefer to negotiate TLS 1.3 over earlier versions
-of TLS.
-
-Implementations that support TLS 1.3 {{I-D.ietf-tls-rfc8446bis}}
-are REQUIRED to support the mandatory-to-implement cipher
-suites listed in {{Section 9.1 of I-D.ietf-tls-rfc8446bis}}.
-
-Implementations that support TLS 1.3 MAY implement additional TLS 1.3
-cipher suites that provide mutual authentication and confidentiality
-as required by PCEP.
-
-PCEPS Implementations SHOULD follow the recommendations given in
-{{RFC9325}}.
-
+NOTE:
+: As noted in {{Section 2.3 of I-D.ietf-tls-rfc8446bis}}, the security
+  properties for early data are weaker than those for subsequent TLS-
+  protected data.  In particular, early data is not forward secret, and
+  there is no protection against the replay of early data between
+  connections.  {{Appendix E.5 of I-D.ietf-tls-rfc8446bis}} requires
+  applications not use early data without a profile that defines its
+  use.
 
 # Security Considerations
 
 The Security Considerations of PCEP {{RFC5440}}, {{?RFC8231}}, {{RFC8253}},
 {{?RFC8281}}, and {{?RFC8283}}; TLS 1.2 {{RFC5246}}; TLS 1.3 {{I-D.ietf-tls-rfc8446bis}},
-and; {{RFC9325}} apply here as well.
+and; {{!RFC9325}} apply here as well.
 
 The Path Computation Element (PCE) defined in {{?RFC4655}} is an entity
 that is capable of computing a network path or route based on a
