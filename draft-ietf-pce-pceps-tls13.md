@@ -174,7 +174,7 @@ and feedback that have made the implemented protocols more mature.
 It is up to the individual working groups to use this information as
 they see fit".
 
-At the time of posting the -01 version of this document, there are no
+At the time of posting the -02 version of this document, there are no
 known implementations of this mechanism.
 
 
@@ -183,4 +183,5 @@ known implementations of this mechanism.
 # Acknowledgments
 {:numbered="false"}
 
-We would like to thank Adrian Farrel for their review.
+We would like to thank Adrian Farrel, Stephane Litkowski, Cheng Li, and
+Andrew Stone for their review.
