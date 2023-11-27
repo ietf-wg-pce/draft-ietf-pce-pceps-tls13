@@ -50,7 +50,7 @@ author:
 Section 3.4 of RFC 8253 specifies TLS connection establishment restrictions
 for PCEPS; PCEPS refers to usage of TLS to provide a secure transport for
 PCEP (Path Computation Element Communication Protocol).  This document adds
-restrictions to specify what PCEPS implementations do if a PCEPS supports
+restrictions to specify what PCEPS implementations do if they support
 more than one version of the TLS protocol and to restrict the use of
 TLS 1.3’s early data.
 
@@ -130,7 +130,7 @@ provisioned in the network (a stateful PCE).  {{RFC8281}} describes the
 setup, maintenance, and teardown of LSPs initiated by a stateful PCE
 without the need for local configuration on the PCC, thus allowing
 for a dynamic network that is centrally controlled.  {{RFC8283}}
-introduces the architecture for PCE as a central controller
+introduces the architecture for PCE as a central controller.
 
 TLS mutual authentication is used to ensure that only authorized users
 and systems are able to send and receive PCEP messages. To this end,
