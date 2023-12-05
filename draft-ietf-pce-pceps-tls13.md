@@ -119,30 +119,6 @@ The Security Considerations of PCEP {{RFC5440}}, {{?RFC8231}}, {{RFC8253}},
 {{?RFC8281}}, and {{?RFC8283}}; TLS 1.2 {{RFC5246}}; TLS 1.3 {{I-D.ietf-tls-rfc8446bis}},
 and; {{!RFC9325}} apply here as well.
 
-The Path Computation Element (PCE) defined in {{?RFC4655}} is an entity
-that is capable of computing a network path or route based on a
-network graph, and applying computational constraints.  A Path
-Computation Client (PCC) may make requests to a PCE for paths to be
-computed. PCEP is the communication protocol between a PCC and PCE and is
-defined in {{RFC5440}}. Stateful PCE {{RFC8231}} specifies a set of extensions to PCEP to
-enable control of TE-LSPs by a PCE that retains the state of the LSPs
-provisioned in the network (a stateful PCE).  {{RFC8281}} describes the
-setup, maintenance, and teardown of LSPs initiated by a stateful PCE
-without the need for local configuration on the PCC, thus allowing
-for a dynamic network that is centrally controlled.  {{RFC8283}}
-introduces the architecture for PCE as a central controller
-
-TLS mutual authentication is used to ensure that only authorized users
-and systems are able to send and receive PCEP messages. To this end,
-neither the PCC nor the PCE should establish a PCEPS with TLS connection
-with an unknown, unexpected, or incorrectly identified peer; see
-{{Section 3.5 of RFC5440}}. If deployments make use of a trusted list of
-Certification Authority (CA) certificates {{!RFC5280}}, then the listed
-CAs should only issue certificates to parties that are authorized to
-access the PCE. Doing otherwise will allow certificates that were issued
-for other purposes to be inappropriately accepted by a PCE.
-
-
 # IANA Considerations
 
 There are no IANA considerations.
