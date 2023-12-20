@@ -2,7 +2,7 @@
 
 This is the working area for the WG Internet-Draft, "PCEPS with TLS 1.3".
 
-* [Editor's Copy](https://ietf-wg-pce.github.io/draft-ietf-pce-pceps-tls13/#go.draft-ietf-pce-pceps-tls13.html)
+* [Editor's Copy](https://ietf-wg-pce.github.io/draft-ietf-pce-pceps-tls13/#go.draft-ietf-pce-pceps-tls13.html) - Apparently there is something wrong with the setup and the Editor's GH-pages are not updating properly.
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-pce-pceps-tls13)
 * [WG Draft](https://datatracker.ietf.org/doc/html/draft-ietf-pce-pceps-tls13)
 * [Compare Editor's Copy to WG Draft](https://ietf-wg-pce.github.io/draft-ietf-pce-pceps-tls13/#go.draft-ietf-pce-pceps-tls13.diff)
