@@ -50,9 +50,9 @@ author:
 Section 3.4 of RFC 8253 specifies TLS connection establishment restrictions
 for PCEPS; PCEPS refers to usage of TLS to provide a secure transport for
 PCEP (Path Computation Element Communication Protocol).  This document adds
-restrictions to specify what PCEPS implementations do if a PCEPS supports
+restrictions to specify what PCEPS implementations do if they support
 more than one version of the TLS protocol and to restrict the use of
-TLS 1.3’s early data.
+TLS 1.3's early data.
 
 
 --- middle
@@ -66,7 +66,7 @@ Communication Protocol) {{!RFC5440}}.  This document adds restrictions to specif
 what PCEPS implementations do if they support more than one version of
 the TLS protocol, e.g., TLS 1.2 {{!RFC5246}} and
 TLS 1.3 {{!I-D.ietf-tls-rfc8446bis}}, and to restrict the use of
-TLS 1.3’s early data, which is also known as 0-RTT data. All other
+TLS 1.3's early data, which is also known as 0-RTT data. All other
 provisions set forth in {{RFC8253}} are unchanged, including connection
 initiation, message framing, connection closure, certificate validation,
 peer identity, and failure handling.
