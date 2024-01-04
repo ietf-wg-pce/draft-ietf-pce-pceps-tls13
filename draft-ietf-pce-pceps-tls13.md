@@ -89,7 +89,8 @@ peer identity, and failure handling.
 establishment. This document adds the following restrictions:
 
 * Implementations that support multiple versions of the TLS protocol MUST
-prefer to negotiate the latest version of the TLS protocol.
+prefer to negotiate the latest version of the TLS protocol; see
+{{Section 4.2.1 of RFC8446}}.
 
 * PCEPS implementations that support TLS 1.3 or later MUST NOT use early data.
 
