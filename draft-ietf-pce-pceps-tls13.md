@@ -71,12 +71,6 @@ provisions set forth in {{RFC8253}} are unchanged, including connection
 initiation, message framing, connection closure, certificate validation,
 peer identity, and failure handling.
 
-<aside markdown="block">
-  Editor's Note: The reference to {{I-D.ietf-tls-rfc8446bis}} could
-  be changed to RFC 8446 incase the progress of the bis draft is
-  slower than the progression of this document.
-</aside>
-
 
 # Conventions and Definitions
 
