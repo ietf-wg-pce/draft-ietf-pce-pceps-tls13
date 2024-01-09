@@ -145,8 +145,10 @@ and feedback that have made the implemented protocols more mature.
 It is up to the individual working groups to use this information as
 they see fit".
 
-At the time of posting the -02 version of this document, there are no
-known implementations of this mechanism.
+At the time of posting the -04 version of this document, there are no
+known implementations of this mechanism. It is believed that one
+vendor has implementation, but these plans are too vague to make
+any further assertions.
 
 
 --- back
